@@ -15,6 +15,7 @@
 		7605706F2A1DB19400CB3E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */; };
 		760570772A1DD06E00CB3E4F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570762A1DD06E00CB3E4F /* HomeViewController.swift */; };
 		760570792A1DD08100CB3E4F /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570782A1DD08100CB3E4F /* StyleViewController.swift */; };
+		76F0DDF02A1EFAE4001985F7 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		760570702A1DB19400CB3E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		760570762A1DD06E00CB3E4F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		760570782A1DD08100CB3E4F /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,42 @@
 		760570612A1DB19200CB3E4F /* ios-closet-app */ = {
 			isa = PBXGroup;
 			children = (
-				760570622A1DB19200CB3E4F /* AppDelegate.swift */,
-				760570642A1DB19200CB3E4F /* SceneDelegate.swift */,
-				760570662A1DB19200CB3E4F /* ClothesViewController.swift */,
-				760570762A1DD06E00CB3E4F /* HomeViewController.swift */,
-				760570782A1DD08100CB3E4F /* StyleViewController.swift */,
-				760570682A1DB19200CB3E4F /* Main.storyboard */,
+				76F0DDF12A1F1CBF001985F7 /* Model */,
+				76F0DDF22A1F1CC7001985F7 /* View */,
+				76F0DDF32A1F1CD6001985F7 /* Controller */,
 				7605706B2A1DB19400CB3E4F /* Assets.xcassets */,
 				7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */,
+				760570622A1DB19200CB3E4F /* AppDelegate.swift */,
+				760570642A1DB19200CB3E4F /* SceneDelegate.swift */,
 				760570702A1DB19400CB3E4F /* Info.plist */,
 			);
 			path = "ios-closet-app";
+			sourceTree = "<group>";
+		};
+		76F0DDF12A1F1CBF001985F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76F0DDF22A1F1CC7001985F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				760570682A1DB19200CB3E4F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76F0DDF32A1F1CD6001985F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				760570762A1DD06E00CB3E4F /* HomeViewController.swift */,
+				760570782A1DD08100CB3E4F /* StyleViewController.swift */,
+				760570662A1DB19200CB3E4F /* ClothesViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F0DDF02A1EFAE4001985F7 /* Clothes.swift in Sources */,
 				760570672A1DB19200CB3E4F /* ClothesViewController.swift in Sources */,
 				760570632A1DB19200CB3E4F /* AppDelegate.swift in Sources */,
 				760570792A1DD08100CB3E4F /* StyleViewController.swift in Sources */,
