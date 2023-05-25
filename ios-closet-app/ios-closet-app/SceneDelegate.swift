@@ -11,12 +11,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(windowScene: windowScene)
+
+        let tabBarVC = UITabBarController()
+
+        let vc1 = UINavigationController(rootViewController: ClothesViewController())
+        let vc2 = UINavigationController(rootViewController: HomeViewController())
+        let vc3 = UINavigationController(rootViewController: StyleViewController())
+
+        vc1.title = "옷"
+        vc1.title = "홈"
+        vc1.title = "스타일"
+
+        tabBarVC.setViewControllers([vc1, vc2, vc3], animated: false)
+        tabBarVC.modalPresentationStyle = .fullScreen
+        tabBarVC.tabBar.backgroundColor = .white
+        
+        guard let items = tabBarVC.tabBar.items else { return }
+        items[0].image = #imageLiteral(resourceName: "Subtract 1")
+        items[1].image = #imageLiteral(resourceName: "Subtract 3")
+        items[2].image = #imageLiteral(resourceName: "알림 1")
+
+        window?.rootViewController = tabBarVC
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
