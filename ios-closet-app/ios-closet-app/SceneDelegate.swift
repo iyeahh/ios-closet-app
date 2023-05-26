@@ -25,18 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc2 = UINavigationController(rootViewController: HomeViewController())
         let vc3 = UINavigationController(rootViewController: StyleViewController())
 
-        vc1.title = "옷"
-        vc1.title = "홈"
-        vc1.title = "스타일"
-
         tabBarVC.setViewControllers([vc1, vc2, vc3], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
-        
-        guard let items = tabBarVC.tabBar.items else { return }
-        items[0].image = #imageLiteral(resourceName: "Subtract 1")
-        items[1].image = #imageLiteral(resourceName: "Subtract 3")
-        items[2].image = #imageLiteral(resourceName: "알림 1")
+
+        vc1.tabBarItem = UITabBarItem(title: "옷", image: UIImage(named: "clothes"), selectedImage: UIImage(named: "selectedClothes"))
+        vc2.tabBarItem = UITabBarItem(title: "홈", image: UIImage(named: "home"), selectedImage: UIImage(named: "selectedHome"))
+        vc3.tabBarItem = UITabBarItem(title: "스타일", image: UIImage(named: "closet"), selectedImage: UIImage(named: "sele ctedHome"))
+
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
 
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()

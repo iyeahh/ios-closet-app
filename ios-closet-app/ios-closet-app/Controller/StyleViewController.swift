@@ -17,6 +17,12 @@ class StyleViewController: UIViewController {
     private func setUI() {
         view.backgroundColor = .lightGray
 
+        let titleLabel = UILabel()
+        titleLabel.textColor = .black
+        titleLabel.text = "MY STYLE"
+        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .white
@@ -24,8 +30,6 @@ class StyleViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-
-        title = "MY STYLE"
     }
 
 }
