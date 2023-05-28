@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         vc1.tabBarItem = UITabBarItem(title: "옷", image: UIImage(named: "clothes"), selectedImage: UIImage(named: "selectedClothes"))
         vc2.tabBarItem = UITabBarItem(title: "홈", image: UIImage(named: "home"), selectedImage: UIImage(named: "selectedHome"))
-        vc3.tabBarItem = UITabBarItem(title: "스타일", image: UIImage(named: "closet"), selectedImage: UIImage(named: "sele ctedHome"))
+        vc3.tabBarItem = UITabBarItem(title: "스타일", image: UIImage(named: "closet"), selectedImage: UIImage(named: "selectedCloset"))
 
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)

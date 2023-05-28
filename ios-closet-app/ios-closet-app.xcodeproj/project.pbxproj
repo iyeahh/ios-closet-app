@@ -10,7 +10,6 @@
 		760570632A1DB19200CB3E4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570622A1DB19200CB3E4F /* AppDelegate.swift */; };
 		760570652A1DB19200CB3E4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570642A1DB19200CB3E4F /* SceneDelegate.swift */; };
 		760570672A1DB19200CB3E4F /* ClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570662A1DB19200CB3E4F /* ClothesViewController.swift */; };
-		7605706A2A1DB19200CB3E4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760570682A1DB19200CB3E4F /* Main.storyboard */; };
 		7605706C2A1DB19400CB3E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7605706B2A1DB19400CB3E4F /* Assets.xcassets */; };
 		7605706F2A1DB19400CB3E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */; };
 		760570772A1DD06E00CB3E4F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570762A1DD06E00CB3E4F /* HomeViewController.swift */; };
@@ -23,7 +22,6 @@
 		760570622A1DB19200CB3E4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		760570642A1DB19200CB3E4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		760570662A1DB19200CB3E4F /* ClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesViewController.swift; sourceTree = "<group>"; };
-		760570692A1DB19200CB3E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7605706B2A1DB19400CB3E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7605706E2A1DB19400CB3E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		760570702A1DB19400CB3E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,8 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				76F0DDF12A1F1CBF001985F7 /* Model */,
-				76F0DDF22A1F1CC7001985F7 /* View */,
-				76F0DDF32A1F1CD6001985F7 /* Controller */,
+				769E63FB2A234DDD006759A3 /* Clothes */,
+				769E63FC2A234E09006759A3 /* Home */,
+				769E64012A234E49006759A3 /* Style */,
 				7605706B2A1DB19400CB3E4F /* Assets.xcassets */,
 				7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */,
 				760570622A1DB19200CB3E4F /* AppDelegate.swift */,
@@ -72,6 +71,63 @@
 				760570702A1DB19400CB3E4F /* Info.plist */,
 			);
 			path = "ios-closet-app";
+			sourceTree = "<group>";
+		};
+		769E63FB2A234DDD006759A3 /* Clothes */ = {
+			isa = PBXGroup;
+			children = (
+				76F0DDF22A1F1CC7001985F7 /* View */,
+				76F0DDF32A1F1CD6001985F7 /* ViewModel */,
+			);
+			path = Clothes;
+			sourceTree = "<group>";
+		};
+		769E63FC2A234E09006759A3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				769E64002A234E3B006759A3 /* ViewModel */,
+				769E63FD2A234E1E006759A3 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		769E63FD2A234E1E006759A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				760570762A1DD06E00CB3E4F /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		769E64002A234E3B006759A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		769E64012A234E49006759A3 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				769E64032A234E6D006759A3 /* ViewModel */,
+				769E64022A234E61006759A3 /* View */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		769E64022A234E61006759A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				760570782A1DD08100CB3E4F /* StyleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		769E64032A234E6D006759A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		76F0DDF12A1F1CBF001985F7 /* Model */ = {
@@ -85,19 +141,16 @@
 		76F0DDF22A1F1CC7001985F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				760570682A1DB19200CB3E4F /* Main.storyboard */,
+				760570662A1DB19200CB3E4F /* ClothesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		76F0DDF32A1F1CD6001985F7 /* Controller */ = {
+		76F0DDF32A1F1CD6001985F7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				760570762A1DD06E00CB3E4F /* HomeViewController.swift */,
-				760570782A1DD08100CB3E4F /* StyleViewController.swift */,
-				760570662A1DB19200CB3E4F /* ClothesViewController.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +213,6 @@
 			files = (
 				7605706F2A1DB19400CB3E4F /* LaunchScreen.storyboard in Resources */,
 				7605706C2A1DB19400CB3E4F /* Assets.xcassets in Resources */,
-				7605706A2A1DB19200CB3E4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		760570682A1DB19200CB3E4F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				760570692A1DB19200CB3E4F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -328,7 +372,7 @@
 				INFOPLIST_FILE = "ios-closet-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -360,7 +404,7 @@
 				INFOPLIST_FILE = "ios-closet-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
