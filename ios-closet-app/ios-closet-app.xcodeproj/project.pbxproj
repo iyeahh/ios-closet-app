@@ -20,6 +20,7 @@
 		762E46EC2A2498220093A976 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E46EB2A2498220093A976 /* UIView+IBInspectable.swift */; };
 		767CCCF42A24AB2200C2C6B0 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CCCF32A24AB2200C2C6B0 /* FirstCollectionViewCell.swift */; };
 		768232D02A258F54008ABB64 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768232CF2A258F54008ABB64 /* Section.swift */; };
+		76DCF9E12A25BF39003E5918 /* StyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DCF9E02A25BF39003E5918 /* StyleCollectionViewCell.swift */; };
 		76F0DDF02A1EFAE4001985F7 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		762E46EB2A2498220093A976 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		767CCCF32A24AB2200C2C6B0 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		768232CF2A258F54008ABB64 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		76DCF9E02A25BF39003E5918 /* StyleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 		76854B232A25AC6500C61E3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				760570762A1DD06E00CB3E4F /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,6 +107,7 @@
 		76854B242A25AC6E00C61E3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				760570782A1DD08100CB3E4F /* StyleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,7 +133,6 @@
 		769E63FD2A234E1E006759A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				760570762A1DD06E00CB3E4F /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 		769E64022A234E61006759A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				760570782A1DD08100CB3E4F /* StyleViewController.swift */,
+				76DCF9E02A25BF39003E5918 /* StyleCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				762E46E72A248A8D0093A976 /* SectionHeaderReusableView.swift in Sources */,
 				767CCCF42A24AB2200C2C6B0 /* FirstCollectionViewCell.swift in Sources */,
 				762E46EC2A2498220093A976 /* UIView+IBInspectable.swift in Sources */,
+				76DCF9E12A25BF39003E5918 /* StyleCollectionViewCell.swift in Sources */,
 				760570672A1DB19200CB3E4F /* ClothesViewController.swift in Sources */,
 				760570632A1DB19200CB3E4F /* AppDelegate.swift in Sources */,
 				762E46E52A248A200093A976 /* ClothesCollectionViewCell.swift in Sources */,

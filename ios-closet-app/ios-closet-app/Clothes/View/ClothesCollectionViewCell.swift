@@ -57,7 +57,7 @@ class ClothesCollectionViewCell: UICollectionViewCell {
             mainImage.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
             mainImage.heightAnchor.constraint(equalToConstant: 80),
 
-            tagLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+            tagLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 3),
             tagLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
             tagLabel.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 8)
         ])

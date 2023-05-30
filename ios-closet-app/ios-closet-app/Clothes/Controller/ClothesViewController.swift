@@ -7,15 +7,11 @@
 
 import UIKit
 import PhotosUI
-import Photos
-
 
 class ClothesViewController: UIViewController {
     private var sections = Section.allSections
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
     private lazy var dataSource = makeDataSource()
-
-    var imageURLs: [URL] = []
 
     // MARK: - Value Types
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Clothes>
@@ -161,20 +157,6 @@ extension ClothesViewController {
     }
 }
 
-extension ClothesViewController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let currentCellIndexPath = collectionView.indexPathsForVisibleItems.first else {
-            return CGSize(width: 100.0, height: 100.0)
-        }
-
-        let cellWidth: CGFloat = currentCellIndexPath == indexPath ? 200.0 : 100.0
-        let cellHeight: CGFloat = currentCellIndexPath == indexPath ? 200.0 : 100.0
-
-        return CGSize(width: cellWidth, height: cellHeight)
-    }
-}
-
 extension ClothesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.row == 0 else { return }
@@ -195,64 +177,5 @@ extension ClothesViewController: UICollectionViewDelegate {
 extension ClothesViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
-
-        let itemProvider = results.first?.itemProvider
-
-        if let itemProvider = itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
-            itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
-                DispatchQueue.main.async {
-                    self.getSavedImageURLs { url in
-                        let clothes = Clothes(imageUrl: url.absoluteString, category: .top, tag: ["랜덤"])
-                        dump(clothes)
-                    }
-                    // 이미지뷰에 표시
-//                    self.detailView.mainImageView.image = image as? UIImage
-//                    if let imageUrl = Bundle.main.url(forResource: "imageName", withExtension: "jpg") {
-//                        // 이미지 파일의 URL을 사용하여 작업 수행
-//                        print(imageUrl.absoluteString)
-//                    }
-//                    Clothes(imageUrl: <#T##String#>, category: .top, tag: ["랜덤"])
-                }
-            }
-        } else {
-            print("이미지 못 불러왔음!!!!")
-        }
-    }
-}
-
-extension ClothesViewController {
-    func getSavedImageURLs(completion: @escaping (URL) -> Void) {
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
-        let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: fetchOptions)
-
-        fetchResult.enumerateObjects { asset, _, _ in
-            if asset.mediaType == .image {
-                let options = PHImageRequestOptions()
-                options.isSynchronous = true
-
-                PHImageManager.default().requestImageData(for: asset, options: options) { imageData, _, _, _ in
-                    if let imageData = imageData, let imageURL = self.saveImageDataToTemporaryDirectory(imageData) {
-                        completion(imageURL)
-                    }
-                }
-            }
-        }
-
-        // imageURLs 배열에 저장된 이미지 URL들을 사용하거나 반환합니다.
-    }
-
-    func saveImageDataToTemporaryDirectory(_ imageData: Data) -> URL? {
-        let tempDirectoryURL = FileManager.default.temporaryDirectory
-        let uniqueFilename = ProcessInfo.processInfo.globallyUniqueString
-        let fileURL = tempDirectoryURL.appendingPathComponent(uniqueFilename)
-
-        do {
-            try imageData.write(to: fileURL)
-            return fileURL
-        } catch {
-            print("Failed to save image data to temporary directory: \(error.localizedDescription)")
-            return nil
-        }
     }
 }

@@ -52,11 +52,11 @@ class FirstCollectionViewCell: UICollectionViewCell {
             mainImage.heightAnchor.constraint(equalToConstant: 20),
             mainImage.widthAnchor.constraint(equalToConstant: 20),
             mainImage.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            mainImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -5),
+            mainImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -8),
 
             label.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             label.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            label.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 8)
+            label.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 3)
         ])
 
         self.cornerRadius = 10
