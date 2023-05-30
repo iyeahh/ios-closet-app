@@ -55,3 +55,23 @@ extension Section {
     ])
   ]
 }
+
+extension Section {
+  static var styleSection: [Section] = [
+    Section(title: "상의", clothes: [
+        Clothes(imageUrl: "https://assets.burberry.com/is/image/Burberryltd/DAE977F2-E43C-4931-B200-547E02C0DE89?$BBY_V2_SL_1x1$&wid=200&hei=200", category: .top, tag: ["후드티"]),
+        Clothes(imageUrl: "https://balenciaga.dam.kering.com/m/4ade8def657cd9c8/eCom-723824TNVN28482_F.jpg?v=1", category: .pants, tag: ["트레이닝바지"]),
+        Clothes(imageUrl: "https://images.descentekorea.co.kr/product/U/N1/UN121SJK21/620/UN121SJK21_GBR0_N01.JPG", category: .overcoat, tag: ["바람막이"]),
+        Clothes(imageUrl: "https://assets.burberry.com/is/image/Burberryltd/6C06032A-820C-48DB-94AF-3873B2FA4B65?$BBY_V2_SL_1x1$&wid=200&hei=200", category: .accessory, tag: ["목걸이"])
+    ])
+  ]
+}
+
+extension Section {
+  static var homeSection: [Section] = [
+    Section(title: "상의", clothes: [
+        Clothes(imageUrl: "https://assets.burberry.com/is/image/Burberryltd/DAE977F2-E43C-4931-B200-547E02C0DE89?$BBY_V2_SL_1x1$&wid=200&hei=200", category: .top, tag: ["후드티"]),
+        Clothes(imageUrl: "https://balenciaga.dam.kering.com/m/4ade8def657cd9c8/eCom-723824TNVN28482_F.jpg?v=1", category: .pants, tag: ["트레이닝바지"])
+    ])
+  ]
+}

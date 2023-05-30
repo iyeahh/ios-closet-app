@@ -11,7 +11,7 @@ class StyleViewController: UIViewController {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
     private var dataSource: UICollectionViewDiffableDataSource<Section,Clothes>?
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Clothes>
-    private var sections = Section.allSections
+    private var sections = Section.styleSection
 
     override func viewDidLoad() {
         super.viewDidLoad()
