@@ -5,15 +5,26 @@
 //  Created by Bora Yang on 2023/05/25.
 //
 
-import Foundation
+import UIKit
 
-struct Clothes {
+struct Clothes: Hashable {
+    var id = UUID()
     let imageUrl: String
-    let category: Category
+    var category: Category
+    var tag: [String]
 
-    init(image: String, category: Category) {
-        self.imageUrl = image
+    init(imageUrl: String, category: Category, tag: [String]) {
+        self.imageUrl = imageUrl
         self.category = category
+        self.tag = tag
+    }
+
+    func hash(into hasher: inout Hasher) {
+      hasher.combine(id)
+    }
+
+    static func == (lhs: Clothes, rhs: Clothes) -> Bool {
+      lhs.id == rhs.id
     }
 }
 
@@ -24,5 +35,3 @@ enum Category {
     case accessory
     case overcoat
 }
-
-

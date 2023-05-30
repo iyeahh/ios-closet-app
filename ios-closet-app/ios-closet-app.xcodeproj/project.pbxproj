@@ -14,6 +14,12 @@
 		7605706F2A1DB19400CB3E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */; };
 		760570772A1DD06E00CB3E4F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570762A1DD06E00CB3E4F /* HomeViewController.swift */; };
 		760570792A1DD08100CB3E4F /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760570782A1DD08100CB3E4F /* StyleViewController.swift */; };
+		762E46E52A248A200093A976 /* ClothesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E46E42A248A200093A976 /* ClothesCollectionViewCell.swift */; };
+		762E46E72A248A8D0093A976 /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E46E62A248A8D0093A976 /* SectionHeaderReusableView.swift */; };
+		762E46EA2A248CB00093A976 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 762E46E92A248CB00093A976 /* Kingfisher */; };
+		762E46EC2A2498220093A976 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E46EB2A2498220093A976 /* UIView+IBInspectable.swift */; };
+		767CCCF42A24AB2200C2C6B0 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CCCF32A24AB2200C2C6B0 /* FirstCollectionViewCell.swift */; };
+		768232D02A258F54008ABB64 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768232CF2A258F54008ABB64 /* Section.swift */; };
 		76F0DDF02A1EFAE4001985F7 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,11 @@
 		760570702A1DB19400CB3E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		760570762A1DD06E00CB3E4F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		760570782A1DD08100CB3E4F /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		762E46E42A248A200093A976 /* ClothesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesCollectionViewCell.swift; sourceTree = "<group>"; };
+		762E46E62A248A8D0093A976 /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		762E46EB2A2498220093A976 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		767CCCF32A24AB2200C2C6B0 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		768232CF2A258F54008ABB64 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762E46EA2A248CB00093A976 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,16 +80,39 @@
 				7605706D2A1DB19400CB3E4F /* LaunchScreen.storyboard */,
 				760570622A1DB19200CB3E4F /* AppDelegate.swift */,
 				760570642A1DB19200CB3E4F /* SceneDelegate.swift */,
+				762E46EB2A2498220093A976 /* UIView+IBInspectable.swift */,
 				760570702A1DB19400CB3E4F /* Info.plist */,
 			);
 			path = "ios-closet-app";
 			sourceTree = "<group>";
 		};
+		76854B222A25AC5800C61E3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				760570662A1DB19200CB3E4F /* ClothesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76854B232A25AC6500C61E3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76854B242A25AC6E00C61E3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		769E63FB2A234DDD006759A3 /* Clothes */ = {
 			isa = PBXGroup;
 			children = (
+				76854B222A25AC5800C61E3F /* Controller */,
 				76F0DDF22A1F1CC7001985F7 /* View */,
-				76F0DDF32A1F1CD6001985F7 /* ViewModel */,
 			);
 			path = Clothes;
 			sourceTree = "<group>";
@@ -85,7 +120,7 @@
 		769E63FC2A234E09006759A3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				769E64002A234E3B006759A3 /* ViewModel */,
+				76854B232A25AC6500C61E3F /* Controller */,
 				769E63FD2A234E1E006759A3 /* View */,
 			);
 			path = Home;
@@ -99,17 +134,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		769E64002A234E3B006759A3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		769E64012A234E49006759A3 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				769E64032A234E6D006759A3 /* ViewModel */,
+				76854B242A25AC6E00C61E3F /* Controller */,
 				769E64022A234E61006759A3 /* View */,
 			);
 			path = Style;
@@ -123,17 +151,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		769E64032A234E6D006759A3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		76F0DDF12A1F1CBF001985F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				76F0DDEF2A1EFAE4001985F7 /* Clothes.swift */,
+				768232CF2A258F54008ABB64 /* Section.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,16 +163,11 @@
 		76F0DDF22A1F1CC7001985F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				760570662A1DB19200CB3E4F /* ClothesViewController.swift */,
+				762E46E42A248A200093A976 /* ClothesCollectionViewCell.swift */,
+				767CCCF32A24AB2200C2C6B0 /* FirstCollectionViewCell.swift */,
+				762E46E62A248A8D0093A976 /* SectionHeaderReusableView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		76F0DDF32A1F1CD6001985F7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +186,9 @@
 			dependencies = (
 			);
 			name = "ios-closet-app";
+			packageProductDependencies = (
+				762E46E92A248CB00093A976 /* Kingfisher */,
+			);
 			productName = "ios-closet-app";
 			productReference = 7605705F2A1DB19200CB3E4F /* ios-closet-app.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 760570562A1DB19200CB3E4F;
+			packageReferences = (
+				762E46E82A248CB00093A976 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 760570602A1DB19200CB3E4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,9 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F0DDF02A1EFAE4001985F7 /* Clothes.swift in Sources */,
+				762E46E72A248A8D0093A976 /* SectionHeaderReusableView.swift in Sources */,
+				767CCCF42A24AB2200C2C6B0 /* FirstCollectionViewCell.swift in Sources */,
+				762E46EC2A2498220093A976 /* UIView+IBInspectable.swift in Sources */,
 				760570672A1DB19200CB3E4F /* ClothesViewController.swift in Sources */,
 				760570632A1DB19200CB3E4F /* AppDelegate.swift in Sources */,
+				762E46E52A248A200093A976 /* ClothesCollectionViewCell.swift in Sources */,
 				760570792A1DD08100CB3E4F /* StyleViewController.swift in Sources */,
+				768232D02A258F54008ABB64 /* Section.swift in Sources */,
 				760570652A1DB19200CB3E4F /* SceneDelegate.swift in Sources */,
 				760570772A1DD06E00CB3E4F /* HomeViewController.swift in Sources */,
 			);
@@ -375,7 +403,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +435,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		762E46E82A248CB00093A976 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		762E46E92A248CB00093A976 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762E46E82A248CB00093A976 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 760570572A1DB19200CB3E4F /* Project object */;
 }
