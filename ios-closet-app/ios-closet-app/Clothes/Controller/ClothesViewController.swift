@@ -50,6 +50,11 @@ class ClothesViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"),
+                    style: .plain,
+                    target: nil, action: nil)
+
     }
 
     private func setLayout() {

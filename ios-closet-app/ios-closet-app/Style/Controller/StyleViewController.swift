@@ -36,6 +36,8 @@ class StyleViewController: UIViewController {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .white
 
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add)
+
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
